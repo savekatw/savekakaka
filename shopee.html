@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>省咖｜蝦皮優惠券與折扣碼整理</title>
+  <meta name="description" content="省咖整理蝦皮優惠券、折扣碼、免運券、活動入口與限時購物優惠。快速查看可用優惠並前往蝦皮領券。" />
+
+  <style>
+    :root {
+      --brand: #ff6f72;
+      --brand-dark: #f05265;
+      --brand-soft: #fff0ee;
+      --peach: #ffad67;
+      --cream: #fff8e7;
+      --mint: #8fcfc8;
+      --pink: #ff8dac;
+      --lavender: #b7a7ff;
+      --bg: #fff7f3;
+      --card: #ffffff;
+      --text: #42343a;
+      --muted: #7e6871;
+      --border: #ffd7d0;
+      --soft: #fff0ee;
+      --green: #249c86;
+      --yellow: #d98222;
+      --gray: #a49aa0;
+      --dark: #5a3944;
+      --shadow: 0 14px 34px rgba(255, 111, 114, 0.14);
+      --shadow-soft: 0 8px 20px rgba(90, 57, 68, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Segoe UI", sans-serif;
+      background:
+        linear-gradient(135deg, rgba(255, 141, 172, 0.16) 0 12%, transparent 12% 100%),
+        linear-gradient(315deg, rgba(143, 207, 200, 0.18) 0 10%, transparent 10% 100%),
+        repeating-linear-gradient(0deg, rgba(255, 173, 103, 0.08) 0 1px, transparent 1px 34px),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--dark);
+      padding: 10px 20px;
+      font-size: 14px;
+      border-bottom: 2px solid #ffe1d8;
+      box-shadow: 0 8px 22px rgba(255, 111, 114, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      flex: 0 0 auto;
+    }
+
+    .site-logo img {
+      display: block;
+      width: auto;
+      height: 52px;
+      max-width: 168px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-weight: 800;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 20px 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.22) 0 12%, transparent 12% 100%),
+        linear-gradient(135deg, #ff6f72, #ff9d72 52%, #ffd88a);
+      color: white;
+      border: 3px solid rgba(255, 255, 255, 0.82);
+      border-radius: 30px;
+      padding: 42px 34px;
+      margin-bottom: 24px;
+      box-shadow: 0 20px 42px rgba(255, 111, 114, 0.28);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 210px;
+      height: 78px;
+      right: -32px;
+      top: 34px;
+      border: 3px solid rgba(255, 255, 255, 0.64);
+      border-radius: 20px;
+      transform: rotate(-13deg);
+    }
+
+    .hero::after {
+      width: 92px;
+      height: 92px;
+      right: 98px;
+      bottom: -36px;
+      background: rgba(143, 207, 200, 0.36);
+      clip-path: polygon(50% 0, 62% 34%, 100% 50%, 62% 66%, 50% 100%, 38% 66%, 0 50%, 38% 34%);
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: rgba(255,255,255,0.26);
+      border: 2px solid rgba(255,255,255,0.44);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #fffdf7;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 38px;
+      line-height: 1.18;
+      letter-spacing: 0;
+      text-shadow: 0 3px 0 rgba(157, 64, 70, 0.16);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 780px;
+      font-size: 17px;
+      opacity: 0.96;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .info-card strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 4px;
+      color: var(--brand-dark);
+    }
+
+    .info-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .section {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: 24px;
+      line-height: 1.3;
+      color: var(--dark);
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      background: var(--peach);
+      clip-path: polygon(50% 0, 62% 34%, 100% 50%, 62% 66%, 50% 100%, 38% 66%, 0 50%, 38% 34%);
+      vertical-align: 2px;
+    }
+
+    .section-desc {
+      margin: -8px 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .coupon-card {
+      border: 2px dashed #ffd1c6;
+      border-radius: 22px;
+      padding: 18px;
+      margin-bottom: 16px;
+      display: grid;
+      grid-template-columns: 1fr 210px;
+      gap: 18px;
+      align-items: center;
+      background: linear-gradient(180deg, #ffffff, #fffaf7);
+      box-shadow: 0 6px 16px rgba(255, 111, 114, 0.08);
+    }
+
+    .coupon-card.featured {
+      border-color: rgba(255, 111, 114, 0.5);
+      background: linear-gradient(180deg, #fff2ef, #ffffff);
+    }
+
+    .coupon-meta-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .badge.hot {
+      background: var(--soft);
+      color: var(--brand);
+    }
+
+    .badge.verified {
+      background: #e9fbf8;
+      color: var(--green);
+    }
+
+    .badge.limited {
+      background: #fff7dd;
+      color: var(--yellow);
+    }
+
+    .badge.expired {
+      background: #f3f4f6;
+      color: var(--gray);
+    }
+
+    .coupon-title {
+      font-size: 19px;
+      font-weight: 900;
+      margin-bottom: 6px;
+      line-height: 1.35;
+      color: var(--dark);
+    }
+
+    .coupon-desc {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .coupon-detail {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #7b5f68;
+    }
+
+    .coupon-action {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .masked-code {
+      border: 2px dashed var(--brand);
+      background: #fff8f0;
+      color: var(--brand);
+      border-radius: 16px;
+      padding: 11px 12px;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-size: 15px;
+      user-select: none;
+    }
+
+    .masked-code.revealed {
+      background: #fff;
+      color: var(--dark);
+      border-color: var(--dark);
+    }
+
+    .button {
+      border: none;
+      display: inline-block;
+      background: linear-gradient(135deg, var(--brand), var(--peach));
+      color: white;
+      text-decoration: none;
+      padding: 13px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-align: center;
+      transition: 0.18s ease;
+      cursor: pointer;
+      font-size: 15px;
+      font-family: inherit;
+      box-shadow: 0 8px 16px rgba(255, 111, 114, 0.24);
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, var(--brand-dark), #ff8d5a);
+      transform: translateY(-1px);
+    }
+
+    .button.secondary {
+      background: linear-gradient(135deg, #7e6871, #5a3944);
+    }
+
+    .button.secondary:hover {
+      background: linear-gradient(135deg, #6f5962, #3f2830);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .category {
+      background: #fffaf3;
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      font-weight: 900;
+      text-align: center;
+      color: var(--dark);
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .steps li {
+      margin-bottom: 8px;
+    }
+
+    .faq-item {
+      border-top: 2px solid #ffe6df;
+      padding: 16px 0;
+    }
+
+    .faq-item:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 18px;
+    }
+
+    .sidebar-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .sidebar-card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      color: var(--dark);
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 2px solid #ffe6df;
+      font-size: 14px;
+    }
+
+    .sidebar-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .affiliate-note {
+      margin: 24px auto 0;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .expired-area {
+      opacity: 0.78;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .quick-info {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 18px 14px 42px;
+      }
+
+      .hero {
+        padding: 30px 22px;
+        border-radius: 22px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .quick-info {
+        grid-template-columns: 1fr;
+      }
+
+      .coupon-card {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="site-logo" href="index.html" aria-label="省咖首頁">
+        <img src="assets/shengka-logo.png" alt="省咖" />
+      </a>
+      <nav class="nav-links" aria-label="主選單">
+        <a href="index.html">首頁</a>
+        <a href="insta360.html">Insta360</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <span class="hero-label">Shopee Coupon & Promo Codes</span>
+      <h1>蝦皮優惠券與折扣碼整理</h1>
+      <p>
+        Saveka.tw 幫你整理蝦皮最新優惠、免運券、折扣碼、活動入口與限時購物資訊。實際折扣、活動期限與適用條件，請以蝦皮官方頁面與結帳頁顯示為準。
+      </p>
+    </section>
+
+    <section class="quick-info">
+      <div class="info-card">
+        <strong>8+</strong>
+        <span>優惠碼與活動入口</span>
+      </div>
+      <div class="info-card">
+        <strong>免運</strong>
+        <span>常見領券入口整理</span>
+      </div>
+      <div class="info-card">
+        <strong>折扣碼</strong>
+        <span>結帳前可先嘗試</span>
+      </div>
+      <div class="info-card">
+        <strong>更新</strong>
+        <span>大型檔期建議每日檢查</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <div class="main-content">
+
+        <section class="section">
+          <h2 class="section-title">最新蝦皮優惠碼與活動</h2>
+          <p class="section-desc">
+            點擊「顯示折扣碼」後，會前往蝦皮優惠頁，同時在本頁顯示優惠碼。優惠是否可用，仍以蝦皮結帳頁為準。
+          </p>
+
+          <div class="coupon-card featured">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">熱門</span>
+                <span class="badge verified">建議先看</span>
+              </div>
+              <div class="coupon-title">蝦皮今日主活動入口</div>
+              <div class="coupon-desc">查看今日平台券、限時折扣、商城活動與分類優惠。</div>
+              <div class="coupon-detail">
+                <span>類型：活動入口</span>
+                <span>門檻：依活動而定</span>
+                <span>期限：依蝦皮頁面為準</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-main">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-main', '無需折扣碼')">顯示優惠</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">免運</span>
+                <span class="badge limited">限時</span>
+              </div>
+              <div class="coupon-title">蝦皮免運券領取入口</div>
+              <div class="coupon-desc">查看可領取的免運券。低消、適用賣場與補貼方式依帳號與活動而定。</div>
+              <div class="coupon-detail">
+                <span>類型：免運券</span>
+                <span>適用：部分商品 / 賣場</span>
+                <span>狀態：需登入確認</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-free-ship">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-free-ship', '領券後使用')">顯示優惠</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">折扣碼</span>
+                <span class="badge verified">可嘗試</span>
+              </div>
+              <div class="coupon-title">蝦皮商城滿額折扣碼</div>
+              <div class="coupon-desc">適合購買商城商品前嘗試。若無法使用，可能是商品不適用、未達低消或活動已結束。</div>
+              <div class="coupon-detail">
+                <span>類型：折扣碼</span>
+                <span>適用：商城 / 指定品類</span>
+                <span>提醒：以結帳頁為準</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-shopping">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-shopping', 'SHOPPING')">顯示折扣碼</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">3C</span>
+                <span class="badge limited">推薦檢查</span>
+              </div>
+              <div class="coupon-title">3C 配件與家電分類優惠</div>
+              <div class="coupon-desc">適合查找手機配件、行動電源、充電器、耳機、記憶卡、生活家電等優惠。</div>
+              <div class="coupon-detail">
+                <span>類型：分類優惠</span>
+                <span>適用：3C / 家電</span>
+                <span>優惠：依頁面顯示</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-tech">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-tech', 'TECH100')">顯示折扣碼</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">限時折扣</span>
+              </div>
+              <div class="coupon-title">蝦皮限時特賣活動</div>
+              <div class="coupon-desc">查看當日限時折扣、秒殺商品與活動品。價格與庫存會即時變動。</div>
+              <div class="coupon-detail">
+                <span>類型：限時活動</span>
+                <span>適用：指定商品</span>
+                <span>狀態：需即時確認</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-flash">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-flash', 'FLASHSALE')">顯示折扣碼</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">信用卡</span>
+                <span class="badge verified">結帳前檢查</span>
+              </div>
+              <div class="coupon-title">蝦皮信用卡與支付優惠</div>
+              <div class="coupon-desc">結帳前可查看信用卡、街口、LINE Pay、蝦皮錢包等支付回饋。</div>
+              <div class="coupon-detail">
+                <span>類型：支付優惠</span>
+                <span>適用：指定銀行 / 支付方式</span>
+                <span>提醒：名額有限</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-card">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-card', 'CARDPAY')">顯示折扣碼</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">新戶</span>
+              </div>
+              <div class="coupon-title">蝦皮新戶優惠入口</div>
+              <div class="coupon-desc">新帳號或符合資格的使用者可能可領取新戶限定券，實際資格以蝦皮帳號顯示為準。</div>
+              <div class="coupon-detail">
+                <span>類型：新戶優惠</span>
+                <span>適用：符合資格帳號</span>
+                <span>狀態：登入後確認</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-newuser">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-newuser', 'NEWUSER')">顯示折扣碼</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">滿額折扣</span>
+                <span class="badge limited">可嘗試</span>
+              </div>
+              <div class="coupon-title">蝦皮滿額折扣碼</div>
+              <div class="coupon-desc">適合購物車金額較高時嘗試。實際可折金額與最低消費依活動條件而定。</div>
+              <div class="coupon-detail">
+                <span>類型：滿額折扣</span>
+                <span>適用：指定商品 / 賣場</span>
+                <span>提醒：可能限量</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-save">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-save', 'SAVE100')">顯示折扣碼</button>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">熱門優惠分類</h2>
+          <p class="section-desc">可以依照你要買的商品類型，先查看是否有對應活動券。</p>
+
+          <div class="category-grid">
+            <div class="category">3C 配件</div>
+            <div class="category">手機周邊</div>
+            <div class="category">生活家電</div>
+            <div class="category">美妝保養</div>
+            <div class="category">食品零食</div>
+            <div class="category">旅行用品</div>
+            <div class="category">居家收納</div>
+            <div class="category">寵物用品</div>
+            <div class="category">母嬰用品</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">蝦皮優惠使用教學</h2>
+          <ol class="steps">
+            <li>點擊本頁的「顯示折扣碼」或「顯示優惠」。</li>
+            <li>系統會開啟蝦皮優惠頁，並在本頁顯示優惠碼。</li>
+            <li>登入蝦皮帳號後，查看是否有可領取的優惠券、免運券或活動折扣。</li>
+            <li>將商品加入購物車，結帳前確認折扣碼、優惠券與免運券是否成功套用。</li>
+            <li>確認最終付款金額後再完成訂單。</li>
+          </ol>
+        </section>
+
+        <section class="section expired-area">
+          <h2 class="section-title">近期可能已過期優惠碼</h2>
+          <p class="section-desc">以下優惠碼可能已過期或僅限部分帳號使用，可在結帳前嘗試，但不保證有效。</p>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge expired">可能過期</span>
+              </div>
+              <div class="coupon-title">蝦皮檔期折扣碼</div>
+              <div class="coupon-desc">若無法使用，代表活動已結束、資格不符或商品不適用。</div>
+              <div class="coupon-detail">
+                <span>狀態：可能過期</span>
+                <span>建議：以蝦皮結帳頁為準</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-sale66">＊＊＊＊＊＊</div>
+              <button class="button secondary" onclick="revealAndGo('code-sale66', 'SALE66')">顯示折扣碼</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge expired">可能過期</span>
+              </div>
+              <div class="coupon-title">大型活動滿額折扣碼</div>
+              <div class="coupon-desc">大型檔期常有滿額折扣碼，過期後可能無法使用。</div>
+              <div class="coupon-detail">
+                <span>狀態：可能過期</span>
+                <span>類型：滿額折扣</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-bigsave">＊＊＊＊＊＊</div>
+              <button class="button secondary" onclick="revealAndGo('code-bigsave', 'BIGSAVE')">顯示折扣碼</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">常見問題</h2>
+
+          <div class="faq-item">
+            <strong>為什麼蝦皮折扣碼不能用？</strong>
+            可能原因包含活動已結束、未達最低消費、商品不適用、帳號資格不符、優惠券已領完，或折扣碼僅限指定賣場使用。
+          </div>
+
+          <div class="faq-item">
+            <strong>免運券可以和折扣碼一起用嗎？</strong>
+            多數情況可以一起使用，但實際是否可併用，要以蝦皮結帳頁顯示為準。
+          </div>
+
+          <div class="faq-item">
+            <strong>為什麼每個人看到的優惠不一樣？</strong>
+            蝦皮優惠可能會依帳號資格、活動期間、商品類別、賣場條件與付款方式而不同。
+          </div>
+
+          <div class="faq-item">
+            <strong>Saveka.tw 是蝦皮官方網站嗎？</strong>
+            不是。Saveka.tw 是第三方優惠資訊整理頁，優惠內容與結帳金額仍以蝦皮官方頁面顯示為準。
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>快速前往蝦皮</h3>
+          <button class="button" style="width:100%;" onclick="goShopee()">前往蝦皮優惠頁</button>
+          <p class="small-note" style="margin-top:12px;">建議登入蝦皮帳號後查看可領取優惠。</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>本頁整理</h3>
+          <ul class="sidebar-list">
+            <li>蝦皮活動入口</li>
+            <li>免運券領取</li>
+            <li>商城折扣碼</li>
+            <li>3C 與家電優惠</li>
+            <li>信用卡 / 支付優惠</li>
+            <li>新戶優惠</li>
+            <li>滿額折扣碼</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>更新資訊</h3>
+          <p class="small-note">
+            最後更新：2026 年 6 月<br>
+            優惠狀態：需以蝦皮頁面為準<br>
+            建議：大型檔期前後每日更新
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <p class="affiliate-note">
+      本頁部分連結可能為聯盟分潤連結。透過本頁前往蝦皮並完成購買時，Saveka.tw 可能獲得佣金，且不會影響你的購買價格。
+    </p>
+
+    <footer>
+      © 2026 Saveka.tw｜本網站非蝦皮官方網站，優惠資訊僅供參考。
+    </footer>
+  </main>
+
+  <script>
+    const affiliateUrl = "https://s.shopee.tw/BQguUmLBi";
+
+    function goShopee() {
+      window.open(affiliateUrl, "_blank", "noopener,noreferrer");
+    }
+
+    function revealAndGo(elementId, code) {
+      const codeBox = document.getElementById(elementId);
+      codeBox.textContent = code;
+      codeBox.classList.add("revealed");
+
+      if (navigator.clipboard && code !== "無需折扣碼" && code !== "領券後使用") {
+        navigator.clipboard.writeText(code).catch(function() {});
+      }
+
+      window.open(affiliateUrl, "_blank", "noopener,noreferrer");
+    }
+  </script>
+</body>
+</html>
