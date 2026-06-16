@@ -85,6 +85,18 @@
       object-fit: contain;
     }
 
+    .topbar-tagline {
+      flex: 1 1 280px;
+      color: #241b1f;
+      text-align: center;
+      font-family: "HanziPen TC", "Comic Sans MS", "Marker Felt", "Noto Sans TC", cursive;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: 0;
+      transform: rotate(-1deg);
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -508,6 +520,16 @@
         font-size: 29px;
       }
 
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .topbar-tagline {
+        order: 3;
+        flex-basis: 100%;
+        font-size: 18px;
+      }
+
       .quick-info {
         grid-template-columns: 1fr;
       }
@@ -529,6 +551,7 @@
       <a class="site-logo" href="/" aria-label="省咖首頁">
         <img src="/assets/shengka-logo.png" alt="省咖" />
       </a>
+      <div class="topbar-tagline">省咖就是帶你一起省錢的咖～</div>
       <nav class="nav-links" aria-label="主選單">
         <a href="/">首頁</a>
         <a href="/insta360/">Insta360</a>
