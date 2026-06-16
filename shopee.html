@@ -538,91 +538,72 @@
       </p>
     </section>
 
-    <section class="quick-info">
-      <div class="info-card">
-        <strong>8+</strong>
-        <span>優惠碼與活動入口</span>
-      </div>
-      <div class="info-card">
-        <strong>免運</strong>
-        <span>常見領券入口整理</span>
-      </div>
-      <div class="info-card">
-        <strong>折扣碼</strong>
-        <span>結帳前可先嘗試</span>
-      </div>
-      <div class="info-card">
-        <strong>更新</strong>
-        <span>大型檔期建議每日檢查</span>
-      </div>
-    </section>
-
     <div class="layout">
       <div class="main-content">
 
         <section class="section">
           <h2 class="section-title">最新蝦皮優惠碼與活動</h2>
           <p class="section-desc">
-            點擊「顯示折扣碼」後，會前往蝦皮優惠頁，同時在本頁顯示優惠碼。優惠是否可用，仍以蝦皮結帳頁為準。
+            前三筆為蝦皮官方頁面可確認的領券 / 活動入口；公開頁面目前多需登入後領券，實際是否可用、名額、適用品項與折抵金額，仍以蝦皮官方頁面與結帳頁為準。
           </p>
 
           <div class="coupon-card featured">
             <div>
               <div class="coupon-meta-row">
-                <span class="badge hot">熱門</span>
-                <span class="badge verified">建議先看</span>
+                <span class="badge hot">官方入口</span>
+                <span class="badge verified">需登入確認</span>
               </div>
-              <div class="coupon-title">蝦皮今日主活動入口</div>
-              <div class="coupon-desc">查看今日平台券、限時折扣、商城活動與分類優惠。</div>
+              <div class="coupon-title">全站優惠券與免運券入口</div>
+              <div class="coupon-desc">蝦皮官方搜尋列目前提示「註冊獲得全站優惠券與免運券」。可登入後查看帳號可領取的全站券與免運券。</div>
               <div class="coupon-detail">
-                <span>類型：活動入口</span>
-                <span>門檻：依活動而定</span>
-                <span>期限：依蝦皮頁面為準</span>
+                <span>類型：官方領券入口</span>
+                <span>名額：可能有限</span>
+                <span>適用：依帳號與商品確認</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-main">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-main', '無需折扣碼')">顯示優惠</button>
+              <button class="button" onclick="revealAndGo('code-main', '登入領券')">顯示優惠</button>
             </div>
           </div>
 
           <div class="coupon-card">
             <div>
               <div class="coupon-meta-row">
-                <span class="badge hot">免運</span>
-                <span class="badge limited">限時</span>
+                <span class="badge hot">官方入口</span>
+                <span class="badge limited">名額有限</span>
               </div>
               <div class="coupon-title">蝦皮免運券領取入口</div>
-              <div class="coupon-desc">查看可領取的免運券。低消、適用賣場與補貼方式依帳號與活動而定。</div>
+              <div class="coupon-desc">免運券通常需登入後領取，低消、適用賣場、補貼方式與可用次數會依帳號與活動而不同。</div>
               <div class="coupon-detail">
-                <span>類型：免運券</span>
+                <span>類型：官方免運券</span>
+                <span>名額：可能有限</span>
                 <span>適用：部分商品 / 賣場</span>
-                <span>狀態：需登入確認</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-free-ship">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-free-ship', '領券後使用')">顯示優惠</button>
+              <button class="button" onclick="revealAndGo('code-free-ship', '免運領券')">顯示優惠</button>
             </div>
           </div>
 
           <div class="coupon-card">
             <div>
               <div class="coupon-meta-row">
-                <span class="badge hot">折扣碼</span>
-                <span class="badge verified">可嘗試</span>
+                <span class="badge hot">官方入口</span>
+                <span class="badge verified">商城確認</span>
               </div>
-              <div class="coupon-title">蝦皮商城滿額折扣碼</div>
-              <div class="coupon-desc">適合購買商城商品前嘗試。若無法使用，可能是商品不適用、未達低消或活動已結束。</div>
+              <div class="coupon-title">蝦皮商城優惠入口</div>
+              <div class="coupon-desc">蝦皮官方頁尾提供「蝦皮商城」入口。商城券與品牌券多需進入活動頁或商品頁後登入查看。</div>
               <div class="coupon-detail">
-                <span>類型：折扣碼</span>
-                <span>適用：商城 / 指定品類</span>
-                <span>提醒：以結帳頁為準</span>
+                <span>類型：官方商城優惠</span>
+                <span>名額：可能有限</span>
+                <span>適用：商城 / 指定商品</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-shopping">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-shopping', 'SHOPPING')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-shopping', '商城領券')">顯示優惠</button>
             </div>
           </div>
 
@@ -633,16 +614,16 @@
                 <span class="badge limited">推薦檢查</span>
               </div>
               <div class="coupon-title">3C 配件與家電分類優惠</div>
-              <div class="coupon-desc">適合查找手機配件、行動電源、充電器、耳機、記憶卡、生活家電等優惠。</div>
+              <div class="coupon-desc">範例優惠碼樣式。適合查找手機配件、行動電源、充電器、耳機、記憶卡、生活家電等優惠；實際需於結帳頁確認。</div>
               <div class="coupon-detail">
                 <span>類型：分類優惠</span>
                 <span>適用：3C / 家電</span>
-                <span>優惠：依頁面顯示</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-tech">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-tech', 'TECH100')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-tech', '3C-SAVE88')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -652,16 +633,16 @@
                 <span class="badge hot">限時折扣</span>
               </div>
               <div class="coupon-title">蝦皮限時特賣活動</div>
-              <div class="coupon-desc">查看當日限時折扣、秒殺商品與活動品。價格與庫存會即時變動。</div>
+              <div class="coupon-desc">範例優惠碼樣式。查看當日限時折扣、秒殺商品與活動品；價格、庫存與優惠名額會即時變動。</div>
               <div class="coupon-detail">
                 <span>類型：限時活動</span>
                 <span>適用：指定商品</span>
-                <span>狀態：需即時確認</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-flash">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-flash', 'FLASHSALE')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-flash', 'FLASH-618')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -672,16 +653,16 @@
                 <span class="badge verified">結帳前檢查</span>
               </div>
               <div class="coupon-title">蝦皮信用卡與支付優惠</div>
-              <div class="coupon-desc">結帳前可查看信用卡、街口、LINE Pay、蝦皮錢包等支付回饋。</div>
+              <div class="coupon-desc">範例優惠碼樣式。結帳前可查看信用卡、街口、LINE Pay、蝦皮錢包等支付回饋，常有指定銀行與名額限制。</div>
               <div class="coupon-detail">
                 <span>類型：支付優惠</span>
                 <span>適用：指定銀行 / 支付方式</span>
-                <span>提醒：名額有限</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-card">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-card', 'CARDPAY')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-card', 'PAY-100')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -691,16 +672,16 @@
                 <span class="badge hot">新戶</span>
               </div>
               <div class="coupon-title">蝦皮新戶優惠入口</div>
-              <div class="coupon-desc">新帳號或符合資格的使用者可能可領取新戶限定券，實際資格以蝦皮帳號顯示為準。</div>
+              <div class="coupon-desc">範例優惠碼樣式。新帳號或符合資格的使用者可能可領取新戶限定券，實際資格以蝦皮帳號顯示為準。</div>
               <div class="coupon-detail">
                 <span>類型：新戶優惠</span>
                 <span>適用：符合資格帳號</span>
-                <span>狀態：登入後確認</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-newuser">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-newuser', 'NEWUSER')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-newuser', 'NEW-USER')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -711,16 +692,16 @@
                 <span class="badge limited">可嘗試</span>
               </div>
               <div class="coupon-title">蝦皮滿額折扣碼</div>
-              <div class="coupon-desc">適合購物車金額較高時嘗試。實際可折金額與最低消費依活動條件而定。</div>
+              <div class="coupon-desc">範例優惠碼樣式。適合購物車金額較高時嘗試，實際可折金額、最低消費與適用商品依活動條件而定。</div>
               <div class="coupon-detail">
                 <span>類型：滿額折扣</span>
                 <span>適用：指定商品 / 賣場</span>
-                <span>提醒：可能限量</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-save">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-save', 'SAVE100')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-save', 'SAVE-100')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -764,15 +745,15 @@
                 <span class="badge expired">可能過期</span>
               </div>
               <div class="coupon-title">蝦皮檔期折扣碼</div>
-              <div class="coupon-desc">若無法使用，代表活動已結束、資格不符或商品不適用。</div>
+              <div class="coupon-desc">範例優惠碼樣式。若無法使用，可能代表活動已結束、名額已滿、資格不符或商品不適用。</div>
               <div class="coupon-detail">
                 <span>狀態：可能過期</span>
-                <span>建議：以蝦皮結帳頁為準</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-sale66">＊＊＊＊＊＊</div>
-              <button class="button secondary" onclick="revealAndGo('code-sale66', 'SALE66')">顯示折扣碼</button>
+              <button class="button secondary" onclick="revealAndGo('code-sale66', 'SALE-66')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -782,15 +763,15 @@
                 <span class="badge expired">可能過期</span>
               </div>
               <div class="coupon-title">大型活動滿額折扣碼</div>
-              <div class="coupon-desc">大型檔期常有滿額折扣碼，過期後可能無法使用。</div>
+              <div class="coupon-desc">範例優惠碼樣式。大型檔期常有滿額折扣碼，過期、名額滿或商品不適用時可能無法使用。</div>
               <div class="coupon-detail">
                 <span>狀態：可能過期</span>
-                <span>類型：滿額折扣</span>
+                <span>提醒：名額可能有限</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-bigsave">＊＊＊＊＊＊</div>
-              <button class="button secondary" onclick="revealAndGo('code-bigsave', 'BIGSAVE')">顯示折扣碼</button>
+              <button class="button secondary" onclick="revealAndGo('code-bigsave', 'BIG-SAVE')">顯示折扣碼</button>
             </div>
           </div>
         </section>
@@ -873,7 +854,7 @@
       codeBox.textContent = code;
       codeBox.classList.add("revealed");
 
-      if (navigator.clipboard && code !== "無需折扣碼" && code !== "領券後使用") {
+      if (navigator.clipboard && /^[A-Z0-9-]{4,}$/.test(code)) {
         navigator.clipboard.writeText(code).catch(function() {});
       }
 
