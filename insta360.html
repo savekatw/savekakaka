@@ -280,6 +280,36 @@
       font-weight: 900;
     }
 
+    .gift-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .gift-list li {
+      margin-bottom: 4px;
+    }
+
+    .masked-code {
+      border: 2px dashed var(--brand);
+      background: #fff8f0;
+      color: var(--brand);
+      border-radius: 16px;
+      padding: 11px 12px;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-size: 15px;
+      user-select: none;
+    }
+
+    .masked-code.revealed {
+      background: #fff;
+      color: var(--dark);
+      border-color: var(--dark);
+    }
+
     .button {
       border: none;
       display: inline-block;
@@ -396,7 +426,14 @@
             </div>
             <h3>Luna Ultra</h3>
             <p>適合想找掌上型創作相機、官方套裝與活動贈品的使用者。</p>
-            <a class="button" href="https://www.insta360.com/sal/luna-series?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B" target="_blank" rel="noopener noreferrer">查看官方優惠</a>
+            <ul class="gift-list">
+              <li>標準版：贈送收納包</li>
+              <li>其他套餐：贈送黑柔鏡</li>
+              <li>商城專屬 bundle：贈送增廣鏡</li>
+              <li>活動時間：6 月 10 日 - 6 月 24 日</li>
+            </ul>
+            <div class="masked-code" id="code-luna">＊＊＊＊＊＊</div>
+            <button class="button" onclick="revealInstaCode('code-luna', 'https://www.insta360.com/sal/luna-series?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
           </div>
         </article>
 
@@ -411,7 +448,12 @@
             </div>
             <h3>Insta360 X5</h3>
             <p>旗艦全景運動相機，適合旅拍、運動與全景內容創作者查看優惠。</p>
-            <a class="button" href="https://www.insta360.com/sal/x5?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B" target="_blank" rel="noopener noreferrer">查看官方優惠</a>
+            <ul class="gift-list">
+              <li>贈品：X5 電池 x 1</li>
+              <li>活動時間：即日起至 6 月 18 日</li>
+            </ul>
+            <div class="masked-code" id="code-x5">＊＊＊＊＊＊</div>
+            <button class="button" onclick="revealInstaCode('code-x5', 'https://www.insta360.com/sal/x5?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
           </div>
         </article>
 
@@ -426,7 +468,12 @@
             </div>
             <h3>Insta360 GO Ultra</h3>
             <p>小型隨身相機品項，適合日常、旅行與第一視角拍攝優惠整理。</p>
-            <a class="button" href="https://www.insta360.com/sal/go-ultra?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B" target="_blank" rel="noopener noreferrer">查看官方優惠</a>
+            <ul class="gift-list">
+              <li>贈品：GO Ultra 充電底座 x 1</li>
+              <li>活動時間：即日起至 6 月 18 日</li>
+            </ul>
+            <div class="masked-code" id="code-go-ultra">＊＊＊＊＊＊</div>
+            <button class="button" onclick="revealInstaCode('code-go-ultra', 'https://www.insta360.com/sal/go-ultra?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
           </div>
         </article>
 
@@ -441,7 +488,12 @@
             </div>
             <h3>Ace Pro 2</h3>
             <p>適合搜尋運動相機、雙電套裝、配件與官方活動組合的頁面。</p>
-            <a class="button" href="https://www.insta360.com/sal/ace-pro-2?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B" target="_blank" rel="noopener noreferrer">查看官方優惠</a>
+            <ul class="gift-list">
+              <li>贈品：Insta360 Ace Pro 2 電池 x 1</li>
+              <li>活動時間：即日起至 6 月 18 日</li>
+            </ul>
+            <div class="masked-code" id="code-ace-pro-2">＊＊＊＊＊＊</div>
+            <button class="button" onclick="revealInstaCode('code-ace-pro-2', 'https://www.insta360.com/sal/ace-pro-2?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
           </div>
         </article>
 
@@ -456,7 +508,12 @@
             </div>
             <h3>Flow 2 Pro</h3>
             <p>手機拍攝、追蹤拍攝與旅行短影音創作常見品項優惠整理。</p>
-            <a class="button" href="https://www.insta360.com/sal/flow-2-pro?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B" target="_blank" rel="noopener noreferrer">查看官方優惠</a>
+            <ul class="gift-list">
+              <li>贈品：Flow 2 Pro / Flow 2 背包支架 x 1</li>
+              <li>活動時間：即日起至 6 月 18 日</li>
+            </ul>
+            <div class="masked-code" id="code-flow-2-pro">＊＊＊＊＊＊</div>
+            <button class="button" onclick="revealInstaCode('code-flow-2-pro', 'https://www.insta360.com/sal/flow-2-pro?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
           </div>
         </article>
       </div>
@@ -470,5 +527,18 @@
       © 2026 Saveka.tw｜本頁非 Insta360 官方網站，優惠資訊僅供參考。
     </footer>
   </main>
+  <script>
+    function revealInstaCode(elementId, url) {
+      const codeBox = document.getElementById(elementId);
+      codeBox.textContent = "INRP79B";
+      codeBox.classList.add("revealed");
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText("INRP79B").catch(function() {});
+      }
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  </script>
 </body>
 </html>
