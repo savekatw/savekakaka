@@ -601,17 +601,37 @@
                 <span class="badge hot">官方入口</span>
                 <span class="badge verified">領券確認</span>
               </div>
-              <div class="coupon-title">一鍵領優惠券</div>
-              <div class="coupon-desc">蝦皮首頁快捷入口提供一鍵領優惠券。可登入後確認帳號可領的全站券、商城券或品牌券，並在結帳頁確認是否適用。</div>
+              <div class="coupon-title">蝦皮商城優惠入口</div>
+              <div class="coupon-desc">前往蝦皮商城查看官方商城、品牌館與指定商品優惠。可搭配活動券使用，實際折扣與適用品項請以結帳頁為準。</div>
               <div class="coupon-detail">
-                <span>類型：官方領券入口</span>
+                <span>類型：蝦皮商城</span>
                 <span>名額：可能有限</span>
-                <span>適用：依帳號與商品確認</span>
+                <span>適用：商城 / 指定商品</span>
               </div>
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-shopping">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-shopping', '領券入口')">顯示優惠</button>
+              <button class="button" onclick="revealAndGo('code-shopping', '商城入口', shopeeMallUrl)">顯示優惠</button>
+            </div>
+          </div>
+
+          <div class="coupon-card">
+            <div>
+              <div class="coupon-meta-row">
+                <span class="badge hot">Insta360</span>
+                <span class="badge limited">618 可搭配</span>
+              </div>
+              <div class="coupon-title">蝦皮 Insta360 旗艦店</div>
+              <div class="coupon-desc">前往蝦皮 Insta360 旗艦店查看相機、配件與官方賣場活動；也可以使用 618 蝦皮優惠，實際可折金額與適用品項請以結帳頁為準。</div>
+              <div class="coupon-detail">
+                <span>類型：官方旗艦店</span>
+                <span>名額：可能有限</span>
+                <span>適用：Insta360 指定商品</span>
+              </div>
+            </div>
+            <div class="coupon-action">
+              <div class="masked-code" id="code-insta360-shopee">＊＊＊＊＊＊</div>
+              <button class="button" onclick="revealAndGo('code-insta360-shopee', '618 優惠', insta360ShopeeUrl)">顯示優惠</button>
             </div>
           </div>
 
@@ -852,12 +872,14 @@
 
   <script>
     const affiliateUrl = "https://s.shopee.tw/BQguUmLBi";
+    const shopeeMallUrl = "https://s.shopee.tw/1LdRLArJsE";
+    const insta360ShopeeUrl = "https://s.shopee.tw/80ALHU0PJ9";
 
     function goShopee() {
       window.open(affiliateUrl, "_blank", "noopener,noreferrer");
     }
 
-    function revealAndGo(elementId, code) {
+    function revealAndGo(elementId, code, targetUrl = affiliateUrl) {
       const codeBox = document.getElementById(elementId);
       codeBox.textContent = code;
       codeBox.classList.add("revealed");
@@ -866,7 +888,7 @@
         navigator.clipboard.writeText(code).catch(function() {});
       }
 
-      window.open(affiliateUrl, "_blank", "noopener,noreferrer");
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
     }
   </script>
 </body>
