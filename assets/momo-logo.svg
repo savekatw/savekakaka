@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title">
+  <title id="title">momo購物</title>
+  <rect width="420" height="120" rx="30" fill="#fff"/>
+  <text x="36" y="75" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="58" font-weight="900" fill="#e43d8f">momo</text>
+  <text x="234" y="74" font-family="Noto Sans TC, PingFang TC, Arial, sans-serif" font-size="36" font-weight="900" fill="#5a3944">購物</text>
+  <path d="M342 28c18 0 32 14 32 32s-14 32-32 32-32-14-32-32 14-32 32-32Z" fill="#ffe3f1"/>
+  <path d="M332 58h20m-10-10v20" stroke="#e43d8f" stroke-width="6" stroke-linecap="round"/>
+</svg>
