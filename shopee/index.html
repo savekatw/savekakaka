@@ -562,26 +562,25 @@
         <section class="section">
           <h2 class="section-title">最新蝦皮優惠碼與活動</h2>
           <p class="section-desc">
-            前三筆依蝦皮官方首頁目前可見的廣告素材整理；實際是否可用、名額、適用品項與折抵金額，仍以蝦皮官方頁面與結帳頁為準。
+            依 6/21 蝦皮官方首頁目前可見活動整理；實際是否可用、名額、適用品項與折抵金額，仍以蝦皮官方頁面與結帳頁為準。
           </p>
 
           <div class="coupon-card featured">
             <div>
               <div class="coupon-meta-row">
-                <span class="badge hot">官方入口</span>
-                <span class="badge verified">需登入確認</span>
+                <span class="badge hot">商城週日</span>
+                <span class="badge verified">最高折 $1,500</span>
               </div>
-              <div class="coupon-title">618 新戶限定最高折 $300</div>
-              <div class="coupon-desc">蝦皮首頁主視覺顯示新戶限定活動，包含首單加購 $0 衛生紙等優惠。數量及券量有限，實際內容依官方頁面顯示為準。</div>
+              <div class="coupon-title">商城週日 95 折券</div>
+              <div class="coupon-desc">蝦皮首頁目前顯示「每週日搶商城 95 折券，最高折 $1,500」。券量、可用店家與折抵上限請以官方活動頁和結帳頁為準。</div>
               <div class="coupon-detail">
-                <span>類型：官方首頁活動</span>
+                <span>類型：商城活動券</span>
                 <span>名額：可能有限</span>
-                <span>適用：新戶 / 指定商品</span>
+                <span>適用：商城 / 指定商品</span>
               </div>
             </div>
             <div class="coupon-action">
-              <div class="masked-code" id="code-main">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-main', '官方活動')">顯示優惠</button>
+              <button class="button" onclick="goOffer(shopeeMallUrl)">前往活動</button>
             </div>
           </div>
 
@@ -591,17 +590,16 @@
                 <span class="badge hot">官方入口</span>
                 <span class="badge limited">名額有限</span>
               </div>
-              <div class="coupon-title">全站大免運與免運 $99 起</div>
-              <div class="coupon-desc">蝦皮首頁快捷入口顯示全站大免運、免運 $99 起等活動。免運門檻、補貼方式與可用次數會依帳號與商品不同。</div>
+              <div class="coupon-title">全站大免運、免運 $99 起</div>
+              <div class="coupon-desc">蝦皮首頁快捷入口顯示全站大免運、免運 $99 起與全館 $69 免運等活動。免運門檻、補貼方式與可用次數會依帳號與商品不同。</div>
               <div class="coupon-detail">
                 <span>類型：官方免運活動</span>
                 <span>名額：可能有限</span>
-                <span>適用：部分商品 / 賣場</span>
+                <span>適用：部分商品 / 賣場 / 全館活動</span>
               </div>
             </div>
             <div class="coupon-action">
-              <div class="masked-code" id="code-free-ship">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-free-ship', '免運入口')">顯示優惠</button>
+              <button class="button" onclick="goOffer()">前往免運活動</button>
             </div>
           </div>
 
@@ -632,7 +630,7 @@
                 <span class="badge verified">領券確認</span>
               </div>
               <div class="coupon-title">蝦皮商城優惠入口</div>
-              <div class="coupon-desc">前往蝦皮商城查看官方商城、品牌館與指定商品優惠。可搭配活動券使用，實際折扣與適用品項請以結帳頁為準。</div>
+              <div class="coupon-desc">前往蝦皮商城查看官方商城、品牌館與指定商品優惠。首頁目前也有商城活動券與狂灑 25% 蝦幣入口，實際折扣與適用品項請以結帳頁為準。</div>
               <div class="coupon-detail">
                 <span>類型：蝦皮商城</span>
                 <span>名額：可能有限</span>
@@ -640,8 +638,7 @@
               </div>
             </div>
             <div class="coupon-action">
-              <div class="masked-code" id="code-shopping">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-shopping', '商城入口', shopeeMallUrl)">顯示優惠</button>
+              <button class="button" onclick="goOffer(shopeeMallUrl)">前往商城</button>
             </div>
           </div>
 
@@ -660,8 +657,7 @@
               </div>
             </div>
             <div class="coupon-action">
-              <div class="masked-code" id="code-insta360-shopee">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-insta360-shopee', '618 優惠', insta360ShopeeUrl)">顯示優惠</button>
+              <button class="button" onclick="goOffer(insta360ShopeeUrl)">前往旗艦店</button>
             </div>
           </div>
 
@@ -672,7 +668,7 @@
                 <span class="badge limited">推薦檢查</span>
               </div>
               <div class="coupon-title">3C 配件與家電分類優惠</div>
-              <div class="coupon-desc">範例優惠碼樣式。適合查找手機配件、行動電源、充電器、耳機、記憶卡、生活家電等優惠；實際需於結帳頁確認。</div>
+              <div class="coupon-desc">蝦皮首頁目前有蝦皮 3C 家電入口，也可搭配搜尋手機配件、行動電源、充電器、耳機、記憶卡、生活家電等優惠；實際需於結帳頁確認。</div>
               <div class="coupon-detail">
                 <span>類型：分類優惠</span>
                 <span>適用：3C / 家電</span>
@@ -691,7 +687,7 @@
                 <span class="badge hot">限時折扣</span>
               </div>
               <div class="coupon-title">蝦皮限時特賣活動</div>
-              <div class="coupon-desc">範例優惠碼樣式。查看當日限時折扣、秒殺商品與活動品；價格、庫存與優惠名額會即時變動。</div>
+              <div class="coupon-desc">蝦皮首頁目前可查看限時特賣、天天超划算與活動合集；價格、庫存與優惠名額會即時變動。</div>
               <div class="coupon-detail">
                 <span>類型：限時活動</span>
                 <span>適用：指定商品</span>
@@ -700,7 +696,7 @@
             </div>
             <div class="coupon-action">
               <div class="masked-code" id="code-flash">＊＊＊＊＊＊</div>
-              <button class="button" onclick="revealAndGo('code-flash', 'FLASH-618')">顯示折扣碼</button>
+              <button class="button" onclick="revealAndGo('code-flash', '天天超划算')">顯示折扣碼</button>
             </div>
           </div>
 
@@ -908,6 +904,10 @@
 
     function goShopee() {
       window.open(affiliateUrl, "_blank", "noopener,noreferrer");
+    }
+
+    function goOffer(targetUrl = affiliateUrl) {
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
     }
 
     function revealAndGo(elementId, code, targetUrl = affiliateUrl) {
