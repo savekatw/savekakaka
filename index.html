@@ -364,13 +364,24 @@
     </footer>
   </main>
   <script>
+    const shopeeLandingUrl = "https://s.shopee.tw/5AqGp2vWQy";
+
+    function openShopeeLanding() {
+      window.open(
+        shopeeLandingUrl,
+        "shopeeAffiliate",
+        "popup,width=420,height=700,left=0,top=80,noopener,noreferrer"
+      );
+    }
+
+    if (!sessionStorage.getItem("savekaShopeePopupOpened")) {
+      sessionStorage.setItem("savekaShopeePopupOpened", "1");
+      openShopeeLanding();
+    }
+
     document.querySelectorAll("[data-shopee-affiliate]").forEach(function(link) {
       link.addEventListener("click", function() {
-        window.open(
-          "https://s.shopee.tw/BQguUmLBi",
-          "shopeeAffiliate",
-          "popup,width=420,height=700,left=0,top=80,noopener,noreferrer"
-        );
+        openShopeeLanding();
       });
     });
   </script>
