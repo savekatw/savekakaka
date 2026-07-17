@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>省咖｜Insta360 優惠券整理</title>
-  <meta name="description" content="省咖整理 Insta360 官方商城優惠入口，包含 Luna Ultra、Insta360 X5、GO Ultra、Ace Pro 2、Flow 2 Pro 等商品。" />
+  <title>省咖｜Insta360 官方商城選購整理</title>
+  <meta name="description" content="省咖整理 Insta360 官方商城入口、現行推廣贈品與實測影片，包含 Luna Ultra、Insta360 X5、GO Ultra、Ace Pro 2、Flow 2 Pro 等商品。" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-758687325"></script>
@@ -210,6 +210,63 @@
       color: var(--muted);
     }
 
+    .featured-video {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+      gap: 22px;
+      align-items: center;
+    }
+
+    .featured-video-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .featured-video-copy h2,
+    .featured-video-copy p {
+      margin: 0;
+    }
+
+    .featured-video-copy h2 {
+      color: var(--dark);
+      font-size: 25px;
+      line-height: 1.3;
+    }
+
+    .featured-video-copy p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .video-link {
+      color: var(--brand-dark);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .video-link:hover {
+      text-decoration: underline;
+    }
+
+    .video-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #201d1f;
+      border: 2px solid #ffe1d8;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(90, 57, 68, 0.12);
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
     .product-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -222,7 +279,7 @@
       background: linear-gradient(180deg, #ffffff, #fffaf7);
       overflow: hidden;
       display: grid;
-      grid-template-rows: 230px 1fr;
+      grid-template-rows: 230px auto 1fr;
       box-shadow: 0 8px 18px rgba(255, 111, 114, 0.1);
     }
 
@@ -240,6 +297,23 @@
       height: 100%;
       object-fit: contain;
       display: block;
+    }
+
+    .product-video {
+      padding: 14px 14px 0;
+      background: #fffaf7;
+    }
+
+    .product-video .video-frame {
+      border-radius: 12px;
+      box-shadow: none;
+    }
+
+    .video-caption {
+      margin: 8px 2px 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
     }
 
     .product-body {
@@ -301,25 +375,6 @@
       margin-bottom: 4px;
     }
 
-    .masked-code {
-      border: 2px dashed var(--brand);
-      background: #fff8f0;
-      color: var(--brand);
-      border-radius: 16px;
-      padding: 11px 12px;
-      text-align: center;
-      font-weight: 900;
-      letter-spacing: 1px;
-      font-size: 15px;
-      user-select: none;
-    }
-
-    .masked-code.revealed {
-      background: #fff;
-      color: var(--dark);
-      border-color: var(--dark);
-    }
-
     .button {
       border: none;
       display: inline-block;
@@ -363,6 +418,10 @@
         grid-template-columns: 1fr;
       }
 
+      .featured-video {
+        grid-template-columns: 1fr;
+      }
+
       .official-logo-card {
         max-width: 320px;
       }
@@ -387,7 +446,7 @@
       }
 
       .product-card {
-        grid-template-rows: 210px 1fr;
+        grid-template-rows: 210px auto 1fr;
       }
     }
   </style>
@@ -411,7 +470,7 @@
     <section class="hero">
       <div>
         <span class="hero-label">Official Store Deals</span>
-        <h1>Insta360 優惠券整理</h1>
+        <h1>Insta360 官方商城選購整理</h1>
         <p>
           依照商品品項整理 Insta360 官方商城入口。點擊品項即可前往官方頁面查看即時價格、套裝、贈品與活動優惠。
         </p>
@@ -421,30 +480,86 @@
       </div>
     </section>
 
+    <section class="section featured-video" aria-labelledby="insta360-guide-title">
+      <div class="featured-video-copy">
+        <span class="badge">選購指南</span>
+        <h2 id="insta360-guide-title">Insta360 全系列怎麼選？</h2>
+        <p>先看攝影師 Enzo 的完整選購解說，再依照拍攝需求比較全景相機、運動相機、迷你相機與手機穩定器。</p>
+        <a class="video-link" href="https://www.youtube.com/watch?v=X1SEOWqgNHU" target="_blank" rel="noopener noreferrer">在 YouTube 觀看完整影片</a>
+      </div>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/X1SEOWqgNHU"
+          title="2026 Insta360 全系列選購指南"
+          loading="eager"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
     <section class="section">
-      <h2 class="section-title">依品項查看官方優惠</h2>
-      <p class="section-desc">商品圖片取自 Insta360 官方商城頁面；優惠、贈品與庫存可能即時變動，請以官方頁面與結帳頁為準。</p>
+      <h2 class="section-title">依品項查看官方商城</h2>
+      <p class="section-desc">目前僅列出官方聯盟頁明確標示的推廣贈品；價格、贈品與庫存可能即時變動，請以官方頁面與結帳頁為準。</p>
 
       <div class="product-grid">
         <article class="product-card">
           <div class="product-media">
+            <img src="/assets/insta360-flow-2-pro.webp" alt="Flow 2 Pro" />
+          </div>
+          <div class="product-video">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/FrDQm2Tq4b0"
+                title="Insta360 Flow 2 Pro 使用評測"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Enzo 實測：Flow 2 Pro 追蹤與手機拍攝體驗</p>
+          </div>
+          <div class="product-body">
+            <div class="coupon-line">
+              <span class="badge">手機穩定器</span>
+              <span class="code-pill">現行推廣贈品</span>
+            </div>
+            <h3>Flow 2 Pro</h3>
+            <p>手機拍攝、追蹤拍攝與旅行短影音創作常見品項優惠整理。</p>
+            <ul class="gift-list">
+              <li>贈品：聚光燈 x 1</li>
+              <li>Flow 2：指定標準套裝、AI 追蹤模組套裝</li>
+              <li>Flow 2 Pro：指定標準、運動跟拍、AI 追蹤、創作者、運動與麥克風套裝</li>
+              <li>雪山白另適用指定輕鬆拍套裝，請以官方結帳頁為準</li>
+            </ul>
+            <a class="button" href="https://www.insta360.com/sal/flow-2-pro?utm_source=AffiliateCenter&amp;utm_medium=copylink&amp;utm_term=INRP79B" target="_blank" rel="noopener noreferrer">前往官方商城查看贈品</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
             <img src="/assets/insta360-luna-ultra.webp" alt="Luna Ultra" />
+          </div>
+          <div class="product-video">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/z0H2THFmTNg"
+                title="Luna Ultra 攝影師詳細評測"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Enzo 實測：Luna Ultra 五大優點與使用限制</p>
           </div>
           <div class="product-body">
             <div class="coupon-line">
               <span class="badge">Luna 系列</span>
-              <span class="code-pill">官方活動入口</span>
+              <span class="code-pill">官方商城入口</span>
             </div>
             <h3>Luna Ultra</h3>
-            <p>適合想找掌上型創作相機、官方套裝與活動贈品的使用者。</p>
-            <ul class="gift-list">
-              <li>標準版：贈送收納包</li>
-              <li>其他套餐：贈送黑柔鏡</li>
-              <li>商城專屬 bundle：贈送增廣鏡</li>
-              <li>活動時間：6 月 10 日 - 6 月 24 日</li>
-            </ul>
-            <div class="masked-code" id="code-luna">＊＊＊＊＊＊</div>
-            <button class="button" onclick="revealInstaCode('code-luna', 'https://www.insta360.com/sal/luna-series?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
+            <p>適合想找掌上型創作相機、雙鏡頭拍攝與官方套裝的使用者。</p>
+            <a class="button" href="https://www.insta360.com/sal/luna-series?utm_source=AffiliateCenter&amp;utm_medium=copylink&amp;utm_term=INRP79B" target="_blank" rel="noopener noreferrer">前往 Insta360 官方商城</a>
           </div>
         </article>
 
@@ -452,19 +567,26 @@
           <div class="product-media">
             <img src="/assets/insta360-x5.jpg" alt="Insta360 X5" />
           </div>
+          <div class="product-video">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/5irpUQaLbyA"
+                title="Insta360 X5 與 DJI Osmo 360 比較評測"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Enzo 比較：Insta360 X5 vs. DJI Osmo 360</p>
+          </div>
           <div class="product-body">
             <div class="coupon-line">
               <span class="badge">360 相機</span>
-              <span class="code-pill">官方活動入口</span>
+              <span class="code-pill">官方商城入口</span>
             </div>
             <h3>Insta360 X5</h3>
-            <p>旗艦全景運動相機，適合旅拍、運動與全景內容創作者查看優惠。</p>
-            <ul class="gift-list">
-              <li>贈品：X5 電池 x 1</li>
-              <li>活動時間：即日起至 6 月 18 日</li>
-            </ul>
-            <div class="masked-code" id="code-x5">＊＊＊＊＊＊</div>
-            <button class="button" onclick="revealInstaCode('code-x5', 'https://www.insta360.com/sal/x5?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
+            <p>旗艦全景運動相機，適合旅拍、運動與全景內容創作者比較選購。</p>
+            <a class="button" href="https://www.insta360.com/sal/x5?utm_source=AffiliateCenter&amp;utm_medium=copylink&amp;utm_term=INRP79B" target="_blank" rel="noopener noreferrer">前往 Insta360 官方商城</a>
           </div>
         </article>
 
@@ -472,19 +594,26 @@
           <div class="product-media">
             <img src="/assets/insta360-go-ultra.webp" alt="Insta360 GO Ultra" />
           </div>
+          <div class="product-video">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/i1U8UosdPuw"
+                title="Insta360 GO Ultra 實拍評測"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Enzo 實測：GO Ultra 日常與第一視角拍攝</p>
+          </div>
           <div class="product-body">
             <div class="coupon-line">
               <span class="badge">GO 系列</span>
-              <span class="code-pill">官方活動入口</span>
+              <span class="code-pill">官方商城入口</span>
             </div>
             <h3>Insta360 GO Ultra</h3>
-            <p>小型隨身相機品項，適合日常、旅行與第一視角拍攝優惠整理。</p>
-            <ul class="gift-list">
-              <li>贈品：GO Ultra 充電底座 x 1</li>
-              <li>活動時間：即日起至 6 月 18 日</li>
-            </ul>
-            <div class="masked-code" id="code-go-ultra">＊＊＊＊＊＊</div>
-            <button class="button" onclick="revealInstaCode('code-go-ultra', 'https://www.insta360.com/sal/go-ultra?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
+            <p>小型隨身相機，適合日常、旅行與第一視角拍攝。</p>
+            <a class="button" href="https://www.insta360.com/sal/go-ultra?utm_source=AffiliateCenter&amp;utm_medium=copylink&amp;utm_term=INRP79B" target="_blank" rel="noopener noreferrer">前往 Insta360 官方商城</a>
           </div>
         </article>
 
@@ -492,41 +621,29 @@
           <div class="product-media">
             <img src="/assets/insta360-ace-pro-2.webp" alt="Ace Pro 2" />
           </div>
+          <div class="product-video">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/DpfzV6GVLUk"
+                title="Insta360 Ace Pro 2 詳細評測"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Enzo 實測：Ace Pro 2 運動拍攝與畫質表現</p>
+          </div>
           <div class="product-body">
             <div class="coupon-line">
               <span class="badge">運動相機</span>
-              <span class="code-pill">官方活動入口</span>
+              <span class="code-pill">官方商城入口</span>
             </div>
             <h3>Ace Pro 2</h3>
-            <p>適合搜尋運動相機、雙電套裝、配件與官方活動組合的頁面。</p>
-            <ul class="gift-list">
-              <li>贈品：Insta360 Ace Pro 2 電池 x 1</li>
-              <li>活動時間：即日起至 6 月 18 日</li>
-            </ul>
-            <div class="masked-code" id="code-ace-pro-2">＊＊＊＊＊＊</div>
-            <button class="button" onclick="revealInstaCode('code-ace-pro-2', 'https://www.insta360.com/sal/ace-pro-2?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
+            <p>適合重視運動拍攝、低光畫質、翻轉螢幕與官方套裝的使用者。</p>
+            <a class="button" href="https://www.insta360.com/sal/ace-pro-2?utm_source=AffiliateCenter&amp;utm_medium=copylink&amp;utm_term=INRP79B" target="_blank" rel="noopener noreferrer">前往 Insta360 官方商城</a>
           </div>
         </article>
 
-        <article class="product-card">
-          <div class="product-media">
-            <img src="/assets/insta360-flow-2-pro.webp" alt="Flow 2 Pro" />
-          </div>
-          <div class="product-body">
-            <div class="coupon-line">
-              <span class="badge">手機穩定器</span>
-              <span class="code-pill">官方活動入口</span>
-            </div>
-            <h3>Flow 2 Pro</h3>
-            <p>手機拍攝、追蹤拍攝與旅行短影音創作常見品項優惠整理。</p>
-            <ul class="gift-list">
-              <li>贈品：Flow 2 Pro / Flow 2 背包支架 x 1</li>
-              <li>活動時間：即日起至 6 月 18 日</li>
-            </ul>
-            <div class="masked-code" id="code-flow-2-pro">＊＊＊＊＊＊</div>
-            <button class="button" onclick="revealInstaCode('code-flow-2-pro', 'https://www.insta360.com/sal/flow-2-pro?utm_source=AffiliateCenter&utm_medium=copylink&utm_term=INRP79B')">點擊連結獲得專屬限量優惠</button>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -538,18 +655,5 @@
       © 2026 Saveka.tw｜本頁非 Insta360 官方網站，優惠資訊僅供參考。
     </footer>
   </main>
-  <script>
-    function revealInstaCode(elementId, url) {
-      const codeBox = document.getElementById(elementId);
-      codeBox.textContent = "INRP79B";
-      codeBox.classList.add("revealed");
-
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText("INRP79B").catch(function() {});
-      }
-
-      window.open(url, "_blank", "noopener,noreferrer");
-    }
-  </script>
 </body>
 </html>
