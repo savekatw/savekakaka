@@ -628,6 +628,38 @@
       text-transform: uppercase;
     }
 
+    .privacy-teaser {
+      text-align: center;
+      background: var(--panel);
+    }
+
+    .privacy-teaser .section-copy {
+      max-width: 570px;
+      margin-inline: auto;
+    }
+
+    .privacy-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 999px;
+      color: var(--white);
+      text-decoration: none;
+      font: 600 10px/1 var(--mono);
+      letter-spacing: .1em;
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .privacy-link::after { content: "→"; color: var(--red); }
+
+    .privacy-link:hover {
+      border-color: rgba(255,255,255,.52);
+      background: rgba(255,255,255,.05);
+    }
+
     footer {
       padding: 24px 0;
       border-top: 1px solid var(--line);
@@ -636,6 +668,12 @@
       font: 500 9px/1.7 var(--mono);
       letter-spacing: .12em;
       text-transform: uppercase;
+    }
+
+    footer a {
+      margin-left: 14px;
+      color: rgba(255,255,255,.58);
+      text-underline-offset: 4px;
     }
 
     .reveal {
@@ -843,6 +881,15 @@
       </div>
     </section>
 
+    <section class="section privacy-teaser">
+      <div class="column reveal">
+        <span class="section-no">Privacy</span>
+        <h2 class="section-title">照片是你的，<br>只留在你的裝置。</h2>
+        <p class="section-copy">EZ Cam 只在你儲存照片時使用相簿新增權限。照片不會上傳至伺服器，也不會用於追蹤、分析或廣告。</p>
+        <a class="privacy-link" href="privacy/">閱讀完整隱私權政策</a>
+      </div>
+    </section>
+
     <section class="download">
       <div class="column reveal">
         <img class="app-icon" src="assets/rs-cam-icon.png" alt="EZ Cam App 圖示" loading="lazy">
@@ -859,7 +906,10 @@
   </main>
 
   <footer>
-    <div class="column">© 2026 EZ Cam · True street photography experience</div>
+    <div class="column">
+      © 2026 EZ Cam · True street photography experience
+      <a href="privacy/">隱私權政策</a>
+    </div>
   </footer>
 
   <script>
