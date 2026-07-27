@@ -78,6 +78,38 @@
 
     .back:hover { color: #fff; }
 
+    .head-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      background: rgba(0,0,0,.42);
+    }
+
+    .language-switch button {
+      min-width: 36px;
+      height: 27px;
+      padding: 0 8px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(255,255,255,.48);
+      cursor: pointer;
+      font: 700 9px/1 var(--mono);
+      letter-spacing: .06em;
+    }
+
+    .language-switch button[aria-pressed="true"] {
+      background: var(--white);
+      color: #111;
+    }
+
     main { padding: 90px 0 120px; }
 
     .eyebrow {
@@ -186,66 +218,101 @@
   <header>
     <div class="column head-inner">
       <div class="brand">EZ CAM</div>
-      <a class="back" href="../">← 返回 EZ Cam</a>
+      <div class="head-actions">
+        <a class="back" href="../" data-i18n data-zh="← 返回 EZ Cam" data-en="← Back to EZ Cam">← 返回 EZ Cam</a>
+        <div class="language-switch" aria-label="Language">
+          <button type="button" data-set-lang="zh" aria-pressed="true">中</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
     <div class="column">
       <span class="eyebrow">Privacy Policy</span>
-      <h1>隱私權政策</h1>
-      <p class="lead">我們尊重你的照片與隱私。EZ Cam 的影像處理在你的裝置上完成。</p>
+      <h1 data-i18n data-zh="隱私權政策" data-en="Privacy Policy">隱私權政策</h1>
+      <p class="lead" data-i18n data-zh="我們尊重你的照片與隱私。EZ Cam 的影像處理在你的裝置上完成。" data-en="We respect your photographs and your privacy. EZ Cam processes images entirely on your device.">我們尊重你的照片與隱私。EZ Cam 的影像處理在你的裝置上完成。</p>
 
       <div class="summary">
-        <strong>簡單來說</strong>
-        <p>EZ Cam 不會收集、上傳、出售或分享你的照片及個人資料。相簿權限只用於儲存你拍攝的照片。</p>
+        <strong data-i18n data-zh="簡單來說" data-en="In short">簡單來說</strong>
+        <p data-i18n data-zh="EZ Cam 不會收集、上傳、出售或分享你的照片及個人資料。相簿權限只用於儲存你拍攝的照片。" data-en="EZ Cam does not collect, upload, sell, or share your photographs or personal data. Photos access is used only to save the images you create.">EZ Cam 不會收集、上傳、出售或分享你的照片及個人資料。相簿權限只用於儲存你拍攝的照片。</p>
       </div>
 
       <article>
-        <h2>一、我們不收集的資料</h2>
-        <p>EZ Cam 不要求建立帳號，也不使用廣告、跨 App 追蹤或第三方分析服務。我們不收集姓名、電子郵件、位置、聯絡人、廣告識別碼、使用紀錄或裝置上的照片。</p>
+        <h2 data-i18n data-zh="一、我們不收集的資料" data-en="1. Data We Do Not Collect">一、我們不收集的資料</h2>
+        <p data-i18n data-zh="EZ Cam 不要求建立帳號，也不使用廣告、跨 App 追蹤或第三方分析服務。我們不收集姓名、電子郵件、位置、聯絡人、廣告識別碼、使用紀錄或裝置上的照片。" data-en="EZ Cam does not require an account and does not use advertising, cross-app tracking, or third-party analytics. We do not collect your name, email address, location, contacts, advertising identifiers, usage history, or photographs stored on your device.">EZ Cam 不要求建立帳號，也不使用廣告、跨 App 追蹤或第三方分析服務。我們不收集姓名、電子郵件、位置、聯絡人、廣告識別碼、使用紀錄或裝置上的照片。</p>
       </article>
 
       <article>
-        <h2>二、相機與相簿權限</h2>
+        <h2 data-i18n data-zh="二、相機與相簿權限" data-en="2. Camera and Photos Permissions">二、相機與相簿權限</h2>
         <ul>
-          <li><strong>相機權限：</strong>只用於即時取景與拍攝照片。</li>
-          <li><strong>相簿新增權限：</strong>只在你選擇儲存時，將完成照片及你主動啟用的原始 RAW 檔加入裝置相簿。</li>
+          <li data-i18n data-zh="&lt;strong&gt;相機權限：&lt;/strong&gt;只用於即時取景與拍攝照片。" data-en="&lt;strong&gt;Camera access:&lt;/strong&gt; Used only for the live viewfinder and capturing photographs."><strong>相機權限：</strong>只用於即時取景與拍攝照片。</li>
+          <li data-i18n data-zh="&lt;strong&gt;相簿新增權限：&lt;/strong&gt;只在你選擇儲存時，將完成照片及你主動啟用的原始 RAW 檔加入裝置相簿。" data-en="&lt;strong&gt;Add-only Photos access:&lt;/strong&gt; Used only when you choose to save a finished photograph or an original RAW file you have explicitly enabled."><strong>相簿新增權限：</strong>只在你選擇儲存時，將完成照片及你主動啟用的原始 RAW 檔加入裝置相簿。</li>
         </ul>
-        <p>EZ Cam 使用新增專用權限，不會為了儲存照片而讀取或瀏覽你相簿中既有的照片。</p>
+        <p data-i18n data-zh="EZ Cam 使用新增專用權限，不會為了儲存照片而讀取或瀏覽你相簿中既有的照片。" data-en="EZ Cam uses add-only access. It does not read or browse the photographs already in your library in order to save new images.">EZ Cam 使用新增專用權限，不會為了儲存照片而讀取或瀏覽你相簿中既有的照片。</p>
       </article>
 
       <article>
-        <h2>三、照片如何處理</h2>
-        <p>拍攝、底片風格處理與輸出皆在你的 iPhone 上完成。照片不會傳送至 EZ Cam 的伺服器，也不會提供給其他公司或第三方。</p>
+        <h2 data-i18n data-zh="三、照片如何處理" data-en="3. How Photographs Are Processed">三、照片如何處理</h2>
+        <p data-i18n data-zh="拍攝、底片風格處理與輸出皆在你的 iPhone 上完成。照片不會傳送至 EZ Cam 的伺服器，也不會提供給其他公司或第三方。" data-en="Capture, film-style processing, and export all take place on your iPhone. Your photographs are not sent to an EZ Cam server or provided to other companies or third parties.">拍攝、底片風格處理與輸出皆在你的 iPhone 上完成。照片不會傳送至 EZ Cam 的伺服器，也不會提供給其他公司或第三方。</p>
       </article>
 
       <article>
-        <h2>四、資料保存與刪除</h2>
-        <p>EZ Cam 不在外部伺服器保存你的照片或個人資料。你可以隨時在 iPhone「照片」App 中刪除已儲存的照片；刪除 EZ Cam 時，App 內保存的本機資料也會一併移除。</p>
+        <h2 data-i18n data-zh="四、資料保存與刪除" data-en="4. Retention and Deletion">四、資料保存與刪除</h2>
+        <p data-i18n data-zh="EZ Cam 不在外部伺服器保存你的照片或個人資料。你可以隨時在 iPhone「照片」App 中刪除已儲存的照片；刪除 EZ Cam 時，App 內保存的本機資料也會一併移除。" data-en="EZ Cam does not retain your photographs or personal data on an external server. You can delete saved images at any time in the Photos app on your iPhone. Deleting EZ Cam also removes data stored locally inside the app.">EZ Cam 不在外部伺服器保存你的照片或個人資料。你可以隨時在 iPhone「照片」App 中刪除已儲存的照片；刪除 EZ Cam 時，App 內保存的本機資料也會一併移除。</p>
       </article>
 
       <article>
-        <h2>五、權限控制</h2>
-        <p>你可以隨時前往 iPhone「設定」中的隱私權與安全性選項，變更或撤銷 EZ Cam 的相機與相簿權限。撤銷相簿權限後，EZ Cam 將無法把新照片加入系統相簿。</p>
+        <h2 data-i18n data-zh="五、權限控制" data-en="5. Permission Controls">五、權限控制</h2>
+        <p data-i18n data-zh="你可以隨時前往 iPhone「設定」中的隱私權與安全性選項，變更或撤銷 EZ Cam 的相機與相簿權限。撤銷相簿權限後，EZ Cam 將無法把新照片加入系統相簿。" data-en="You can change or revoke EZ Cam camera and Photos permissions at any time in the Privacy &amp; Security settings on your iPhone. If Photos access is revoked, EZ Cam will no longer be able to add new photographs to your system library.">你可以隨時前往 iPhone「設定」中的隱私權與安全性選項，變更或撤銷 EZ Cam 的相機與相簿權限。撤銷相簿權限後，EZ Cam 將無法把新照片加入系統相簿。</p>
       </article>
 
       <article>
-        <h2>六、App 內購買</h2>
-        <p>如果你購買 EZ Cam PRO，交易由 Apple App Store 處理。EZ Cam 不會取得或保存你的信用卡號碼等付款資訊。</p>
+        <h2 data-i18n data-zh="六、App 內購買" data-en="6. In-App Purchases">六、App 內購買</h2>
+        <p data-i18n data-zh="如果你購買 EZ Cam PRO，交易由 Apple App Store 處理。EZ Cam 不會取得或保存你的信用卡號碼等付款資訊。" data-en="If you purchase EZ Cam PRO, the transaction is processed by the Apple App Store. EZ Cam does not receive or store payment information such as your credit card number.">如果你購買 EZ Cam PRO，交易由 Apple App Store 處理。EZ Cam 不會取得或保存你的信用卡號碼等付款資訊。</p>
       </article>
 
       <article>
-        <h2>七、政策更新與聯絡方式</h2>
-        <p>若 EZ Cam 的資料處理方式有變更，我們會更新本頁內容與生效日期。如對隱私權政策有任何疑問，請透過 App Store 上的開發者聯絡資訊與我們聯繫。</p>
+        <h2 data-i18n data-zh="七、政策更新與聯絡方式" data-en="7. Updates and Contact">七、政策更新與聯絡方式</h2>
+        <p data-i18n data-zh="若 EZ Cam 的資料處理方式有變更，我們會更新本頁內容與生效日期。如對隱私權政策有任何疑問，請透過 App Store 上的開發者聯絡資訊與我們聯繫。" data-en="If the way EZ Cam handles data changes, we will update this page and its effective date. If you have questions about this policy, please contact us using the developer contact information listed on the App Store.">若 EZ Cam 的資料處理方式有變更，我們會更新本頁內容與生效日期。如對隱私權政策有任何疑問，請透過 App Store 上的開發者聯絡資訊與我們聯繫。</p>
       </article>
 
-      <div class="date">生效日期：2026 年 7 月 27 日</div>
+      <div class="date" data-i18n data-zh="生效日期：2026 年 7 月 27 日" data-en="Effective date: July 27, 2026">生效日期：2026 年 7 月 27 日</div>
     </div>
   </main>
 
   <footer>
     <div class="column">© 2026 EZ Cam · Privacy Policy</div>
   </footer>
+
+  <script>
+    const languageButtons = document.querySelectorAll("[data-set-lang]");
+    const translatedElements = document.querySelectorAll("[data-i18n]");
+
+    function setLanguage(language) {
+      const selected = language === "en" ? "en" : "zh";
+      document.documentElement.lang = selected === "en" ? "en" : "zh-Hant";
+      document.title = selected === "en"
+        ? "Privacy Policy | EZ Cam"
+        : "隱私權政策｜EZ Cam";
+
+      translatedElements.forEach((element) => {
+        element.innerHTML = element.dataset[selected];
+      });
+
+      languageButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.setLang === selected));
+      });
+
+      localStorage.setItem("ezcam-language", selected);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    setLanguage(localStorage.getItem("ezcam-language") || "zh");
+  </script>
 </body>
 </html>

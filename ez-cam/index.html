@@ -116,6 +116,39 @@
       text-transform: uppercase;
     }
 
+    .head-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      background: rgba(0,0,0,.42);
+      backdrop-filter: blur(12px);
+    }
+
+    .language-switch button {
+      min-width: 38px;
+      height: 28px;
+      padding: 0 9px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(255,255,255,.48);
+      cursor: pointer;
+      font: 700 9px/1 var(--mono);
+      letter-spacing: .06em;
+    }
+
+    .language-switch button[aria-pressed="true"] {
+      background: var(--white);
+      color: #111;
+    }
+
     .hero {
       position: relative;
       min-height: 100svh;
@@ -715,7 +748,13 @@
   <header class="topbar">
     <div class="wide-column topbar-inner">
       <div class="brand"><span class="brand-dot"></span> EZ CAM</div>
-      <div class="mini-status">Street camera for iPhone</div>
+      <div class="head-actions">
+        <div class="mini-status">Street camera for iPhone</div>
+        <div class="language-switch" aria-label="Language">
+          <button type="button" data-set-lang="zh" aria-pressed="true">中</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -724,44 +763,44 @@
       <div class="column">
         <p class="hero-kicker">A street camera for iPhone</p>
         <h1>EZ CAM</h1>
-        <div class="hero-tagline">真實街拍體驗</div>
-        <p class="hero-lead">把手機變成一台直接、快速、有手感的街拍相機。少一點選單，多一點在街上的專注。</p>
+        <div class="hero-tagline" data-i18n data-zh="真實街拍體驗" data-en="THE REAL STREET EXPERIENCE">真實街拍體驗</div>
+        <p class="hero-lead" data-i18n data-zh="把手機變成一台直接、快速、有手感的街拍相機。少一點選單，多一點在街上的專注。" data-en="Turn your iPhone into a direct, fast, tactile street camera. Fewer menus. More attention on the street.">把手機變成一台直接、快速、有手感的街拍相機。少一點選單，多一點在街上的專注。</p>
 
         <div class="hero-poster">
           <img src="assets/rs-cam-standard.jpg" alt="EZ Cam 街拍相機介面" fetchpriority="high">
         </div>
-        <div class="scroll-note">Discover the camera</div>
+        <div class="scroll-note" data-i18n data-zh="探索 EZ Cam" data-en="Discover the camera">探索 EZ Cam</div>
       </div>
     </section>
 
     <section class="section">
       <div class="column reveal">
-        <span class="section-no">01 / The experience</span>
-        <h2 class="section-title">不是套一層濾鏡。<br>是真正拿起來拍。</h2>
-        <p class="section-copy">EZ Cam 把街拍最重要的事情留在眼前：<strong>焦段、距離、光線與瞬間。</strong>介面像一台真正的相機，讓手指記得怎麼操作，視線不用離開街道。</p>
+        <span class="section-no" data-i18n data-zh="01 / 真實體驗" data-en="01 / The experience">01 / 真實體驗</span>
+        <h2 class="section-title" data-i18n data-zh="不是套一層濾鏡。&lt;br&gt;是真正拿起來拍。" data-en="Not another filter.&lt;br&gt;A camera you actually shoot.">不是套一層濾鏡。<br>是真正拿起來拍。</h2>
+        <p class="section-copy" data-i18n data-zh="EZ Cam 把街拍最重要的事情留在眼前：&lt;strong&gt;焦段、距離、光線與瞬間。&lt;/strong&gt;介面像一台真正的相機，讓手指記得怎麼操作，視線不用離開街道。" data-en="EZ Cam keeps the essentials of street photography in sight: &lt;strong&gt;focal length, distance, light, and the moment.&lt;/strong&gt; Its interface feels like a real camera, so your hands know what to do while your eyes stay on the street.">EZ Cam 把街拍最重要的事情留在眼前：<strong>焦段、距離、光線與瞬間。</strong>介面像一台真正的相機，讓手指記得怎麼操作，視線不用離開街道。</p>
       </div>
     </section>
 
     <section class="section focal-section">
       <div class="column">
         <div class="reveal">
-          <span class="section-no">02 / Three classic focal lengths</span>
-          <h2 class="section-title">三個經典街拍焦段。</h2>
-          <p class="section-copy">不用換算 0.8× 或 1.7×。EZ Cam 直接使用攝影師熟悉的等效焦段，讓構圖回到直覺。</p>
+          <span class="section-no" data-i18n data-zh="02 / 三個經典焦段" data-en="02 / Three classic focal lengths">02 / 三個經典焦段</span>
+          <h2 class="section-title" data-i18n data-zh="三個經典街拍焦段。" data-en="Three street classics.">三個經典街拍焦段。</h2>
+          <p class="section-copy" data-i18n data-zh="不用換算 0.8× 或 1.7×。EZ Cam 直接使用攝影師熟悉的等效焦段，讓構圖回到直覺。" data-en="No more translating 0.8× or 1.7×. EZ Cam speaks in the equivalent focal lengths photographers know, making composition instinctive again.">不用換算 0.8× 或 1.7×。EZ Cam 直接使用攝影師熟悉的等效焦段，讓構圖回到直覺。</p>
         </div>
 
         <div class="focal-stack">
           <div class="focal-card reveal">
             <div class="focal-number">21</div>
-            <div class="focal-detail"><b>融入環境</b><span>把街道、空間與人物一起收進畫面。</span></div>
+            <div class="focal-detail"><b data-i18n data-zh="融入環境" data-en="Inside the scene">融入環境</b><span data-i18n data-zh="把街道、空間與人物一起收進畫面。" data-en="Bring the street, space, and people into one frame.">把街道、空間與人物一起收進畫面。</span></div>
           </div>
           <div class="focal-card reveal">
             <div class="focal-number">28</div>
-            <div class="focal-detail"><b>街拍標準</b><span>靠近一點，保留現場的速度與張力。</span></div>
+            <div class="focal-detail"><b data-i18n data-zh="街拍標準" data-en="The street standard">街拍標準</b><span data-i18n data-zh="靠近一點，保留現場的速度與張力。" data-en="Step closer and keep the speed and tension of the scene.">靠近一點，保留現場的速度與張力。</span></div>
           </div>
           <div class="focal-card reveal">
             <div class="focal-number">40</div>
-            <div class="focal-detail"><b>專注主體</b><span>自然壓縮空間，留下更安靜的觀看距離。</span></div>
+            <div class="focal-detail"><b data-i18n data-zh="專注主體" data-en="Focus the frame">專注主體</b><span data-i18n data-zh="自然壓縮空間，留下更安靜的觀看距離。" data-en="Compress the scene naturally for a quieter point of view.">自然壓縮空間，留下更安靜的觀看距離。</span></div>
           </div>
         </div>
       </div>
@@ -770,9 +809,9 @@
     <section class="section">
       <div class="column">
         <div class="reveal">
-          <span class="section-no">03 / Camera in your hand</span>
-          <h2 class="section-title">每一個控制，<br>都在該在的位置。</h2>
-          <p class="section-copy">橫向機身、清楚觀景窗、實體感按鍵。EZ Cam 不要求你學一套手機介面，而是把相機的操作邏輯放進 iPhone。</p>
+          <span class="section-no" data-i18n data-zh="03 / 手中的相機" data-en="03 / Camera in your hand">03 / 手中的相機</span>
+          <h2 class="section-title" data-i18n data-zh="每一個控制，&lt;br&gt;都在該在的位置。" data-en="Every control,&lt;br&gt;right where it belongs.">每一個控制，<br>都在該在的位置。</h2>
+          <p class="section-copy" data-i18n data-zh="橫向機身、清楚觀景窗、實體感按鍵。EZ Cam 不要求你學一套手機介面，而是把相機的操作邏輯放進 iPhone。" data-en="A landscape body, a clear viewfinder, and tactile controls. EZ Cam does not ask you to learn another phone interface—it brings the logic of a camera to iPhone.">橫向機身、清楚觀景窗、實體感按鍵。EZ Cam 不要求你學一套手機介面，而是把相機的操作邏輯放進 iPhone。</p>
         </div>
 
         <div class="camera-poster reveal">
@@ -782,15 +821,15 @@
         <div class="feature-list">
           <div class="feature-row reveal">
             <div class="feature-index">WB</div>
-            <div><h3>白平衡</h3><p>直接調整冷暖，讓光線符合你當下看到的街景。</p></div>
+            <div><h3 data-i18n data-zh="白平衡" data-en="White balance">白平衡</h3><p data-i18n data-zh="直接調整冷暖，讓光線符合你當下看到的街景。" data-en="Shift warmth directly until the light matches the street in front of you.">直接調整冷暖，讓光線符合你當下看到的街景。</p></div>
           </div>
           <div class="feature-row reveal">
             <div class="feature-index">EV</div>
-            <div><h3>曝光補償</h3><p>快速壓暗高光或拉起陰影，不必離開觀景窗。</p></div>
+            <div><h3 data-i18n data-zh="曝光補償" data-en="Exposure compensation">曝光補償</h3><p data-i18n data-zh="快速壓暗高光或拉起陰影，不必離開觀景窗。" data-en="Protect highlights or lift shadows without leaving the viewfinder.">快速壓暗高光或拉起陰影，不必離開觀景窗。</p></div>
           </div>
           <div class="feature-row reveal">
             <div class="feature-index">●</div>
-            <div><h3>直接快門</h3><p>觸控紅色快門，也支援 iPhone 相機控制鍵。</p></div>
+            <div><h3 data-i18n data-zh="直接快門" data-en="A direct shutter">直接快門</h3><p data-i18n data-zh="觸控紅色快門，也支援 iPhone 相機控制鍵。" data-en="Tap the red shutter or use the iPhone Camera Control button.">觸控紅色快門，也支援 iPhone 相機控制鍵。</p></div>
           </div>
         </div>
       </div>
@@ -799,26 +838,26 @@
     <section class="section">
       <div class="column">
         <div class="reveal">
-          <span class="section-no">04 / Three classic films</span>
-          <h2 class="section-title">三款經典底片。<br>三種街道語氣。</h2>
-          <p class="section-copy">不是事後再選濾鏡。拍攝前就決定你要用哪一卷底片看世界，按下快門後直接完成顯影。</p>
+          <span class="section-no" data-i18n data-zh="04 / 三款經典底片" data-en="04 / Three classic films">04 / 三款經典底片</span>
+          <h2 class="section-title" data-i18n data-zh="三款經典底片。&lt;br&gt;三種街道語氣。" data-en="Three classic films.&lt;br&gt;Three voices for the street.">三款經典底片。<br>三種街道語氣。</h2>
+          <p class="section-copy" data-i18n data-zh="不是事後再選濾鏡。拍攝前就決定你要用哪一卷底片看世界，按下快門後直接完成顯影。" data-en="This is not a filter you choose afterward. Pick the film you want to see the world through before you shoot, then let EZ Cam develop the frame as you press the shutter.">不是事後再選濾鏡。拍攝前就決定你要用哪一卷底片看世界，按下快門後直接完成顯影。</p>
         </div>
 
         <div class="film-list">
           <article class="film-card reveal" data-stock="400">
             <small>BLACK &amp; WHITE · 400</small>
             <h3>MONO HARD</h3>
-            <p>硬調黑白、清楚邊緣與陰影顆粒，為光影與幾何而生。</p>
+            <p data-i18n data-zh="硬調黑白、清楚邊緣與陰影顆粒，為光影與幾何而生。" data-en="Hard black and white, defined edges, and shadow grain—built for light and geometry.">硬調黑白、清楚邊緣與陰影顆粒，為光影與幾何而生。</p>
           </article>
           <article class="film-card reveal" data-stock="GOLD">
             <small>DAYLIGHT · COLOR</small>
             <h3>EZ GOLD</h3>
-            <p>溫暖色彩、柔和銳度與細緻顆粒，適合日常街道與人物。</p>
+            <p data-i18n data-zh="溫暖色彩、柔和銳度與細緻顆粒，適合日常街道與人物。" data-en="Warm color, gentle sharpness, and fine grain for everyday streets and people.">溫暖色彩、柔和銳度與細緻顆粒，適合日常街道與人物。</p>
           </article>
           <article class="film-card reveal" data-stock="800">
             <small>NIGHT · CINE 800</small>
             <h3>NIGHT CINE 800</h3>
-            <p>為夜色打造的電影感，高光帶著橙紅光暈，保留城市的氣氛。</p>
+            <p data-i18n data-zh="為夜色打造的電影感，高光帶著橙紅光暈，保留城市的氣氛。" data-en="A cinematic night look with warm halation that keeps the atmosphere of the city intact.">為夜色打造的電影感，高光帶著橙紅光暈，保留城市的氣氛。</p>
           </article>
         </div>
       </div>
@@ -827,9 +866,9 @@
     <section class="section prefocus">
       <div class="column reveal">
         <div class="focus-mark" aria-hidden="true"><span class="focus-dot"></span></div>
-        <span class="section-no">05 / Pre-focus</span>
-        <h2 class="section-title">先對好焦，<br>瞬間來了就拍。</h2>
-        <p class="section-copy">預先對焦讓 EZ Cam 先準備好你要的拍攝距離。人物走進畫面時，省下等待自動對焦的時間，把決定性的瞬間留住。</p>
+        <span class="section-no" data-i18n data-zh="05 / 預先對焦" data-en="05 / Pre-focus">05 / 預先對焦</span>
+        <h2 class="section-title" data-i18n data-zh="先對好焦，&lt;br&gt;瞬間來了就拍。" data-en="Set the focus.&lt;br&gt;Wait for the moment.">先對好焦，<br>瞬間來了就拍。</h2>
+        <p class="section-copy" data-i18n data-zh="預先對焦讓 EZ Cam 先準備好你要的拍攝距離。人物走進畫面時，省下等待自動對焦的時間，把決定性的瞬間留住。" data-en="Pre-focus lets EZ Cam prepare for your chosen shooting distance. When someone enters the frame, there is no autofocus delay—only the decisive moment.">預先對焦讓 EZ Cam 先準備好你要的拍攝距離。人物走進畫面時，省下等待自動對焦的時間，把決定性的瞬間留住。</p>
       </div>
     </section>
 
@@ -837,8 +876,8 @@
       <div class="column">
         <div class="reveal">
           <div class="pro-badge">EZ CAM / PRO</div>
-          <h2 class="section-title">更完整的控制，<br>仍然一樣直接。</h2>
-          <p class="section-copy">PRO 模式把街拍攝影師真正需要的進階功能打開：更多焦距、RAW，以及最重要的手動快門速度。</p>
+          <h2 class="section-title" data-i18n data-zh="更完整的控制，&lt;br&gt;仍然一樣直接。" data-en="More control.&lt;br&gt;Just as direct.">更完整的控制，<br>仍然一樣直接。</h2>
+          <p class="section-copy" data-i18n data-zh="PRO 模式把街拍攝影師真正需要的進階功能打開：更多焦距、RAW，以及最重要的手動快門速度。" data-en="PRO unlocks the advanced controls street photographers actually need: more focal lengths, RAW support, and most importantly, manual shutter speed.">PRO 模式把街拍攝影師真正需要的進階功能打開：更多焦距、RAW，以及最重要的手動快門速度。</p>
         </div>
 
         <div class="pro-poster reveal">
@@ -848,8 +887,8 @@
         <div class="pro-points">
           <article class="pro-point reveal">
             <small>01 / SEVEN FOCAL LENGTHS</small>
-            <h3>七個焦距開啟</h3>
-            <p>從超廣角到望遠，依照你的 iPhone 相機系統開啟更多構圖選擇。</p>
+            <h3 data-i18n data-zh="七個焦距開啟" data-en="Seven focal lengths">七個焦距開啟</h3>
+            <p data-i18n data-zh="從超廣角到望遠，依照你的 iPhone 相機系統開啟更多構圖選擇。" data-en="From ultra-wide to telephoto, unlock more ways to frame the street based on your iPhone camera system.">從超廣角到望遠，依照你的 iPhone 相機系統開啟更多構圖選擇。</p>
             <div class="seven-focals">
               <span>13mm</span><span>21mm</span><span>24mm</span><span>28mm</span>
               <span>40mm</span><span>100mm</span><span>200mm</span>
@@ -857,13 +896,13 @@
           </article>
           <article class="pro-point reveal">
             <small>02 / RAW SUPPORT</small>
-            <h3>保留原始 RAW</h3>
-            <p>同時保留完成照與原始檔。現在可以直接分享，之後仍然擁有重新後製的空間。</p>
+            <h3 data-i18n data-zh="保留原始 RAW" data-en="Keep the original RAW">保留原始 RAW</h3>
+            <p data-i18n data-zh="同時保留完成照與原始檔。現在可以直接分享，之後仍然擁有重新後製的空間。" data-en="Save the finished photo and the original file together. Share now, while keeping room to reinterpret the image later.">同時保留完成照與原始檔。現在可以直接分享，之後仍然擁有重新後製的空間。</p>
           </article>
           <article class="pro-point reveal">
             <small>03 / SHUTTER PRIORITY</small>
-            <h3>手動快門速度</h3>
-            <p>街拍常用的 Tv／S 模式：自行決定快門速度。凝結迎面走來的人，或刻意保留城市移動的軌跡。</p>
+            <h3 data-i18n data-zh="手動快門速度" data-en="Manual shutter speed">手動快門速度</h3>
+            <p data-i18n data-zh="街拍常用的 Tv／S 模式：自行決定快門速度。凝結迎面走來的人，或刻意保留城市移動的軌跡。" data-en="The Tv/S mode street photographers rely on. Choose the shutter speed yourself to freeze an approaching subject or preserve the motion of the city.">街拍常用的 Tv／S 模式：自行決定快門速度。凝結迎面走來的人，或刻意保留城市移動的軌跡。</p>
           </article>
         </div>
       </div>
@@ -874,8 +913,8 @@
         <div class="shot-frame">
           <div>
             <small>SHOT ON EZ CAM</small>
-            <h2>實拍作品即將加入</h2>
-            <p>這裡已保留給 EZ Cam 真實拍攝的街道、人物與夜色。</p>
+            <h2 data-i18n data-zh="實拍作品即將加入" data-en="Real-world shots coming soon">實拍作品即將加入</h2>
+            <p data-i18n data-zh="這裡已保留給 EZ Cam 真實拍攝的街道、人物與夜色。" data-en="Reserved for streets, people, and nights photographed with EZ Cam.">這裡已保留給 EZ Cam 真實拍攝的街道、人物與夜色。</p>
           </div>
         </div>
       </div>
@@ -883,10 +922,10 @@
 
     <section class="section privacy-teaser">
       <div class="column reveal">
-        <span class="section-no">Privacy</span>
-        <h2 class="section-title">照片是你的，<br>只留在你的裝置。</h2>
-        <p class="section-copy">EZ Cam 只在你儲存照片時使用相簿新增權限。照片不會上傳至伺服器，也不會用於追蹤、分析或廣告。</p>
-        <a class="privacy-link" href="privacy/">閱讀完整隱私權政策</a>
+        <span class="section-no" data-i18n data-zh="隱私權" data-en="Privacy">隱私權</span>
+        <h2 class="section-title" data-i18n data-zh="照片是你的，&lt;br&gt;只留在你的裝置。" data-en="Your photographs.&lt;br&gt;Only on your device.">照片是你的，<br>只留在你的裝置。</h2>
+        <p class="section-copy" data-i18n data-zh="EZ Cam 只在你儲存照片時使用相簿新增權限。照片不會上傳至伺服器，也不會用於追蹤、分析或廣告。" data-en="EZ Cam uses add-only Photos access when you save an image. Your photos are never uploaded or used for tracking, analytics, or advertising.">EZ Cam 只在你儲存照片時使用相簿新增權限。照片不會上傳至伺服器，也不會用於追蹤、分析或廣告。</p>
+        <a class="privacy-link" href="privacy/" data-i18n data-zh="閱讀完整隱私權政策" data-en="Read the full privacy policy">閱讀完整隱私權政策</a>
       </div>
     </section>
 
@@ -894,13 +933,13 @@
       <div class="column reveal">
         <img class="app-icon" src="assets/rs-cam-icon.png" alt="EZ Cam App 圖示" loading="lazy">
         <h2>EZ CAM</h2>
-        <p>真實街拍體驗，裝進你的 iPhone。</p>
-        <span class="app-store-button" role="link" aria-disabled="true" aria-label="App Store 下載連結即將開放">
+        <p data-i18n data-zh="真實街拍體驗，裝進你的 iPhone。" data-en="The real street experience, made for your iPhone.">真實街拍體驗，裝進你的 iPhone。</p>
+        <span class="app-store-button" role="link" aria-disabled="true" aria-label="App Store download coming soon">
           <span class="apple-mark" aria-hidden="true">●</span>
           <small>Download on the</small>
           <strong>App Store</strong>
         </span>
-        <div class="coming-note">下載連結即將開放</div>
+        <div class="coming-note" data-i18n data-zh="下載連結即將開放" data-en="Download link coming soon">下載連結即將開放</div>
       </div>
     </section>
   </main>
@@ -908,11 +947,38 @@
   <footer>
     <div class="column">
       © 2026 EZ Cam · True street photography experience
-      <a href="privacy/">隱私權政策</a>
+      <a href="privacy/" data-i18n data-zh="隱私權政策" data-en="Privacy Policy">隱私權政策</a>
     </div>
   </footer>
 
   <script>
+    const languageButtons = document.querySelectorAll("[data-set-lang]");
+    const translatedElements = document.querySelectorAll("[data-i18n]");
+
+    function setLanguage(language) {
+      const selected = language === "en" ? "en" : "zh";
+      document.documentElement.lang = selected === "en" ? "en" : "zh-Hant";
+      document.title = selected === "en"
+        ? "EZ Cam | The Real Street Experience"
+        : "EZ Cam｜真實街拍體驗";
+
+      translatedElements.forEach((element) => {
+        element.innerHTML = element.dataset[selected];
+      });
+
+      languageButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.setLang === selected));
+      });
+
+      localStorage.setItem("ezcam-language", selected);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    setLanguage(localStorage.getItem("ezcam-language") || "zh");
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
